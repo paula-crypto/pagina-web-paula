@@ -6,7 +6,11 @@
 
 .padre {
     width: 100%;
+    max-width: 1200px;
+    margin: 40px auto; 
 }
+
+
 
 .header-top {
     background: #6d2c91;
@@ -31,6 +35,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 40px;
+}
+
+.promocao-banner h2,
+.tag{
+    margin-left: 10%;
 }
 
 .logo {
@@ -59,41 +68,72 @@
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 40px 0;
+    justify-content: space-evenly;
+    padding: 40px 0 40px 0; 
     position: relative;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: left;
 }
 
 .banner-content {
     max-width: 600px;
+    margin-right: 0px;
+    margin-left: 0;     
+    text-align: left;  
+    position: relative;
+    right: 0;    
+
+}
+.banner-content h2 {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
 }
 
+
 .banner img {
-    width: 200px;
+    width: 250px;
     margin-left: 40px;
     max-width: 100%;
     height: auto;
+    position: relative;
+    right: 15%;
+   
 }
 
 .banner .oferta-btn {
-    background: #fff;
-    color: #ff9900;
-    border: none;
-    padding: 8px 16px;
+    background:#ff9900;
+    border: #fff 1px solid;
+    padding: 6px 23px;
     border-radius: 20px;
     font-weight: bold;
     margin-top: 20px;
     cursor: pointer;
 }
+.oferta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
 
+
+.carrito-icon-absolute {
+    position: absolute;
+    width: 40px!important;
+    height: 28px;
+    z-index: 2;
+    left: 10%;
+   
+    
+}
 .tag {
     font-size: 0.9em;
     background: #6d2c91;
     color: #fff;
     display: inline-block;
-    padding: 2px 10px;
+    padding: 2px 20px;
     border-radius: 10px;
     border: 1px solid #fff;
 }
@@ -103,7 +143,6 @@
     justify-content: center;
     gap: 30px;
     background: #fff;
-    padding: 30px 0;
     margin-top: 10px;
     flex-wrap: wrap;
 }
@@ -113,7 +152,7 @@
     flex-direction: column;
     align-items: center;
     background: #f7f7f7;
-    padding: 15px 25px;
+    padding: 25px 85px;
     border-radius: 10px;
     font-size: 0.95em;
 }
@@ -136,7 +175,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 33px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -161,7 +200,6 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 100%;
     background-color: #6d2c91;
     padding: 20px;
 }
@@ -238,14 +276,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
     padding: 40px;
     background-color: #f2f2f2;
     gap: 30px;
 }
 
 .footer-section {
-    flex: 1 1 150px;
+    flex: 1 1 200px;
     font-size: 14px;
     color: #333;
 }
@@ -290,5 +327,76 @@
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 768px) {
+  .footer-info {
+      flex-direction: column; /* columnas en vertical */
+      text-align: center;
+  }
 
+  .footer-section {
+      margin-bottom: 20px;
+  }
+}
+  .social-icons {
+      justify-content: center;
+  }
 
+  @media (max-width: 768px) {
+    .banner {
+        flex-direction: column; /* texto arriba, imagen abajo */
+        text-align: center; /* centrar todo */
+        gap: 20px;
+    }
+
+    .banner-content {
+        text-align: center;
+    }
+
+  .oferta-row {
+      display: block;
+    position: relative;
+    right: 15%;
+    
+  }
+   
+  .I1{
+    margin-left: 0;
+    position: relative;
+    left:-7%;
+    
+   }
+}
+  
+@media (max-width: 340px){
+  .banner{ padding: 22px 10px; }
+  .banner-content h2{
+    font-size: clamp(1.55rem, 6.2vw, 1.8rem);    line-height: 1.22;
+  }
+}
+@media (max-width: 900px) {
+  .header-top {
+    flex-wrap: wrap;         
+    justify-content: center; 
+    gap: 10px;              
+    padding: 10px;          
+  }
+
+  .header-top input[type="text"] {
+    flex: 1 1 100%;          
+    max-width: 300px;         
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-top {
+    flex-direction: column;   /* En pantallas muy pequeñas, uno debajo del otro */
+    align-items: center;
+  }
+
+  .header-top input[type="text"] {
+    width: 90%;               /* El input ocupa casi todo el ancho */
+  }
+}
+
+  
