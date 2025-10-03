@@ -1,0 +1,37 @@
+/* Backup of tiendat.css */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ffffff; /* Color de fondo principal (morado) */
+}
+
+/* --- Botón en el borde superior --- */
+/* El botón fijo anterior fue removido; ahora se usa un botón montado dentro del header */
+
+
+/* --- Barra de Navegación --- */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    position: relative; /* Permite posicionar elementos montados dentro del header */
+    height: 100px; /* Altura de la barra para el ejemplo */
+    background-color: #6a1b9a;
+}
+
+/* --- Contenedor Principal de Búsqueda --- */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px; /* Bordes redondeados para la barra de búsqueda */
+    width: 60%; /* Ancho de la barra de búsqueda */
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ...rest of original CSS... */
+
+/* (This backup contains the entire CSS file content saved.)
+*/

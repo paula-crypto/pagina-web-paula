@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model vs Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* ----- Demostración del Box Model ----- */
+        .box-model-demo {
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .box {
+            background-color: #f1c40f;
+            width: 150px;
+            height: 100px;
+            padding: 15px; /* Relleno interno */
+            border: 5px solid #e67e22; /* Borde */
+            margin: 20px; /* Margen externo */
+            display: inline-block; /* Para que se vean una al lado de la otra */
+            box-sizing: content-box; /* Comportamiento por defecto del box model */
+        }
+
+        /* ----- Demostración de Flexbox ----- */
+        .flexbox-demo {
+            border: 2px solid #2ecc71;
+            padding: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around; /* Distribuye el espacio entre los elementos */
+            align-items: center; /* Alinea los elementos verticalmente */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+            height: 300px;
+            background-color: #ecf0f1;
+        }
+
+        .flex-item {
+            background-color: #9b59b6;
+            color: white;
+            padding: 20px;
+            margin: 10px; /* Margen para separarlos */
+            text-align: center;
+            flex-grow: 1; /* Permite que el elemento crezca para ocupar espacio disponible */
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Demostración del Box Model</h2>
+    <p>Cada caja tiene su propio ancho, alto, relleno, borde y margen, lo que determina su tamaño y separación.</p>
+    <div class="box-model-demo">
+        <div class="box">Caja 1</div>
+        <div class="box">Caja 2</div>
+        <div class="box">Caja 3</div>
+    </div>
+    <p>Como puedes ver, cada caja es una entidad independiente. Su tamaño final incluye el contenido, el padding y el borde, y el margin añade el espacio entre ellas.</p>
+
+    ---
+
+    <h2>Demostración de Flexbox</h2>
+    <p>Los elementos se distribuyen y se alinean automáticamente dentro del contenedor flexible.</p>
+    <div class="flexbox-demo">
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+    </div>
+    <p>Aquí, los "flex items" no tienen un ancho fijo. El "flex container" con <code>display: flex</code> controla cómo se distribuyen y se alinean, expandiéndose para llenar el espacio y moviéndose a la siguiente línea si es necesario.</p>
+
+</body>
+</html>
