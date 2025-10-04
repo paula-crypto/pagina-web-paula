@@ -339,7 +339,7 @@ body {
 
 .produtos-title-row .produtos-title{
     text-align: left;
-    margin: 0;
+    margin: auto;
     font-size: 1.8em;
 }
 
@@ -704,3 +704,4 @@ footer {
         max-width: 100px;
     }
 }
+
